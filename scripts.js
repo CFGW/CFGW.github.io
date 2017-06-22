@@ -3,5 +3,5 @@ $(document).ready(function () {
     e.preventDefault();
     var three = $('a.links').index($(this))
     $('.divs').hide().eq(three).show();
-  })
+  });
 });
