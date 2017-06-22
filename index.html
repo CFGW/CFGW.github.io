@@ -224,5 +224,12 @@ body {
 
   </body>
   <script type="text/javascript" src="scripts.js">
+  $(document).ready(function () {
+    $('a.links').click(function (e) {
+      e.preventDefault();
+      var three = $('a.links').index($(this))
+      $('.divs').hide().eq(three).show();
+    });
+  });
   </script>
 </html>
