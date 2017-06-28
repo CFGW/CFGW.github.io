@@ -7,6 +7,10 @@
   color: #3c4769;
 }
 
+html {
+  height: 100%;
+}
+
 a, a:visited {
   /*border-bottom: solid 7px #FFF;*/
   transition: border-bottom 300ms ease-in-out;
@@ -79,6 +83,10 @@ a, a:visited {
 body {
   font-size: 62.5%;
   font-family: 'Helvetica', sans serif;
+  height: 100%;
+  background-repeat: none;
+  background-attachment: fixed;
+  background-image: radial-gradient(rgba(255,255,255,0) 50%, #cfd9df 100%);
 }
 
   .headwrapper {
@@ -173,26 +181,26 @@ a button:hover {
 }
 
   #pic-festable {
-    background: url('./images/festable200x150.png') center top no-repeat;
+    background: url('./images/festable200x150.png') center top no-repeat #FFF;
   }
   #pic-fostering {
-    background: url('./images/fostering200x150.png') center top no-repeat;
+    background: url('./images/fostering200x150.png') center top no-repeat #FFF;
   }
   #pic-strait {
-    background: url('./images/strait200x150.png') center top no-repeat;
+    background: url('./images/strait200x150.png') center top no-repeat #FFF;
   }
 
   #pic-lain {
-    background: url('./images/lain200x150.png') center top no-repeat;
+    background: url('./images/lain200x150.png') center top no-repeat #FFF;
   }
   #pic-backgrounds {
-    background: url('./images/backgrounds200x150.png') center top no-repeat;
+    background: url('./images/backgrounds200x150.png') center top no-repeat #FFF;
   }
   #pic-scumbag {
-    background: url('./images/scumbag200x150.png') center top no-repeat;
+    background: url('./images/scumbag200x150.png') center top no-repeat #FFF;
   }
   #pic-indecs {
-    background: url('./images/indecs200x150.png') center top no-repeat;
+    background: url('./images/indecs200x150.png') center top no-repeat #FFF;
   }
 
   #pic-work {
