@@ -1,10 +1,16 @@
 @keyframes openBrackets {
-  0% { width: 97px;}
+  0% { width: 97px; transform: translateY( 300px );}
+  50% { width: 97px; transform: translateY( 0px );}
   100% { width: 400px;}
 }
-@keyframes spin {
-  from {transform:rotate(0deg);}
-  to {transform:rotate(360deg);}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  70% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes rollIn {
+  0% { transform: rotate(45deg); }
+  100% { transform: rotate(0deg); }
 }
 
 
@@ -14,6 +20,7 @@
 }
 body {
   overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
@@ -31,42 +38,72 @@ body {
   margin-right: auto;
 }
 .logo {
-  background-image: url('./images/logo01.svg');
-  width: 442px;
-  height: 420px;
+  /*width: 442px;
+  height: 442px;*/
+  /*width:23vw;
+  height:24vh;*/
+  width: 53vh;
+  height: 53vh;
   margin-left: auto;
   margin-right: auto;
-
-  -webkit-animation-name: spin;
-    -webkit-animation-duration: 2400ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: cubic-bezier(.16,.78,.79,.03);
-    -moz-animation-name: spin;
-    -moz-animation-duration: 2400ms;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: cubic-bezier(.16,.78,.79,.03);
-    -ms-animation-name: spin;
-    -ms-animation-duration: 2400ms;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-timing-function: cubic-bezier(.16,.78,.79,.03);
-    -o-transition: rotate(3600deg);
+  margin-top: 6vh;
 }
 .sub-logo {
   display: block;
   width: 400px;
   margin-left: auto;
   margin-right: auto;
-  animation: openBrackets 600ms ease-in-out;
+  animation: openBrackets 1200ms cubic-bezier(.65,.05,.33,1.37);
 }
 #bLeft {
   float: left;
+  position: relative;
+  z-index: 4;
 }
 #bRight {
   float: right;
+  position: relative;
+    z-index: 4;
 }
-#test {
-  display: absolute;
-  left: 0;
-  width: 300px;
+#wip-text {
+  margin-left: auto;
+  margin-right: auto;
   z-index: 100;
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+  animation: fadeIn 1650ms ease-in;
+}
+#outter-circle {
+  background: url('./images/logo2OUTTER.svg') center center no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+    animation: rollIn 550ms cubic-bezier(.65,.05,.33,1.37);
+}
+#inner-circle {
+  background: url('./images/logo2INNER.svg') center center no-repeat;
+  background-size: contain;
+  z-index: 2;
+  position: relative;
+}
+#logo {
+  background: url('./images/logo2.svg') center center no-repeat;
+  background-size: contain;
+  z-index: 3;
+  position: relative;
+}
+#contactlink {
+  border: 2px solid #5a4847;
+  color: #FFF;
+  background: #5a4847;
+  padding: 8px 18px 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 350ms;
+}
+#contactlink:hover {
+  padding: 8px 38px 8px 38px;
+  background: rgba(0,0,0,0);
+  color: #5a4847;
 }
