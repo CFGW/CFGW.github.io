@@ -3,14 +3,14 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="442px" height="442px" viewBox="0 0 442 442" enable-background="new 0 0 442 442" xml:space="preserve">
-<path display="none" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#5A4848" stroke-width="41" stroke-miterlimit="10" d="
+<path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#5A4848" stroke-width="41" stroke-miterlimit="10" d="
 	M173.436,391.768C80.424,365.502,26.318,268.804,52.588,175.793C78.855,82.78,175.55,28.675,268.563,54.944
 	c93.012,26.266,147.116,122.964,120.849,215.977C363.145,363.929,266.447,418.036,173.436,391.768z"/>
-<circle display="none" fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#5A4848" stroke-width="11" stroke-miterlimit="10" cx="221" cy="223.354" r="209.942"/>
+<circle fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#5A4848" stroke-width="11" stroke-miterlimit="10" cx="221" cy="223.354" r="209.942"/>
 <circle fill-rule="evenodd" clip-rule="evenodd" fill="#E2DEDF" cx="221" cy="223.356" r="175"/>
 <g>
 	<g>
-		<path fill-rule="evenodd" clip-rule="evenodd" fill="#9A9191" d="M320.933,64.164c-2.918-8.814-12.574-17.975-24.328-19.859
+		<path fill-rule="evenodd" clip-rule="evenodd" fill="#5B4947" d="M320.933,64.164c-2.918-8.814-12.574-17.975-24.328-19.859
 			c-16.252-2.607-26.246,1.885-41.826,15.326c-10.42,11.559-11.955,15.47-15.984,24.345c-5.574,12.281-8.117,25.414-7.729,38.865
 			c0.391,13.429,1.475,26.847,2.563,40.244c0.721,8.883,1.771,18.104,2.861,26.588c0.618,5.768,1.573,11.121,1.573,11.121
 			s-8.843,5.451-11.745,7.129c-1.543,0.893-1.844,0.709-2.168-0.357c-1.75-5.75-1.375-4.625-4.125-12.125
