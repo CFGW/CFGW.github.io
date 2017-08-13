@@ -107,3 +107,17 @@ body {
   background: rgba(0,0,0,0);
   color: #5a4847;
 }
+
+
+@media (max-width: 480px) {
+  @keyframes openBrackets {
+    0% { width: 97px; transform: translateY( 300px );}
+    50% { width: 97px; transform: translateY( 0px );}
+    100% { width: 300px;}
+  }
+
+  .sub-logo {
+    width: 300px;
+  }
+
+}
