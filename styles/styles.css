@@ -525,3 +525,8 @@
     font-weight: 200;
     margin-left: 48px;
 }
+
+#festable2016-map{
+    max-width: 600px;
+    min-width: 200px;
+}
