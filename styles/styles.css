@@ -155,7 +155,7 @@
         }
 
         #b3 {
-            background: url('../img/world-blue.jpg')#252525;
+            background: url('../img/eorld-blue.jpg')#252525;
             top: 200vh;
             background-size: cover;
         }
@@ -290,7 +290,7 @@
 }
 
 #defencevpn-head {
-    background: url('../img/world-blue.jpg')#252525;
+    background: url('../img/eorld-blue.jpg')#252525;
     background-size: cover;
     z-index: 1;
 }
