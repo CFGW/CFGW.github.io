@@ -1,200 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CFGW</title>
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="icon" type="image/png" href="./img/64x64.png">
+    <link rel="icon" type="image/png" href="./styles/img/64x64.png">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="./scripts/copyright.js"></script>
+    <script type="text/javascript" src="./scripts/scroll.js"></script>
 </head>
 
 <body>
-    <header>
-        <div id="logo-filler"></div>
+    <header id="anchor-top">
+        <div class="top-container">
+            <img src="./styles/img/cfgw-logo.svg" id="cfgw-logo" alt="cfgw-logo">
+            <p class="top-descriptor">Cameron Foster Graphic &amp; Web</p>
+            <a href="mailto:cfgw@protonmail.com" id="top-email">cfgw@protonmail.com</a>
+        </div>
+        <h1>I'm Cameron Foster —
+            <br> Digital Designer
+        </h1>
+        <a href="#contact-container" id="top-contact-btn">Lets work together</a>
+        <a href="#fest18-container" id="scroll-down">⏷</a>
     </header>
-
-    <main id="top">
-        <section class="block light-text" id="b1">
-            <aside>
-                <p class="context1">Cameron Foster Graphic & Web</p>
-                <p class="context2">cfgw@protonmail.com</p>
-            </aside>
-            <div class="title-card">
-                <h1>
-                    I'm Cameron Foster —
-                    <br> Digital designer
-                </h1>
-                <a href="#bottom" class="more-btn">Let's work together</a>
+    <main>
+        <section id="fest18-container" class="dark-text">
+            <div class="top-container">
+                <p class="top-descriptor">Brand Identity</p>
+                <p class="top-year">2018</p>
             </div>
-            <a href="#b2" id="scroll-down-filler">
-                <p class="arrow-icon">▼</p>
-            </a>
-        </section>
-
-        <section class="block dark-text" id="b2">
-            <aside>
-                <p class="context1">Brand Identity</p>
-                <p class="context2">2018</p>
-            </aside>
-            <div class="title-card">
-                <h3>
-                    Festable —
-                    <br> Music & Arts Event
-                </h3>
-                <a href="festable2018.html" class="more-btn">View this case</a>
-            </div>
+            <h2>Festable —
+                <br> Music &amp; Arts Event
+            </h2>
+            <a class="view-case-btn dark-text" href="festable2018.html">View this case</a>
             <ul class="list-skills">
                 <li>Identity</li>
-                <li>UI design</li>
+                <li>Web Design</li>
+                <li>Videography</li>
+            </ul>
+            <div class="bottom-container">
+                <div class="next">
+                    <a href="#defence-container" class="next-text dark-text">next case</a>
+                    <a href="#defence-container" class="next-icon dark-text">⏷</a>
+                </div>
+            </div>
+        </section>
+        <section id="defence-container">
+            <div class="top-container">
+                <p class="top-descriptor">Digital Design</p>
+                <p class="top-year">2017</p>
+            </div>
+            <h2>DefenceVPN —
+                <br> Virtual Private Network
+            </h2>
+            <a class="view-case-btn" href="defencevpn.html">View this case</a>
+            <ul class="list-skills">
+                <li>Graphic Design</li>
                 <li>Web Design</li>
             </ul>
-            <div class="navigate">
-                <a href="#b3" class="next">next case</a>
+            <div class="bottom-container">
+                    <div class="prev">
+                        <a href="#fest18-container" class="prev-text">previous case</a>
+                        <a href="#fest18-container" class="prev-icon">⏶</a>
+                    </div>
+                    <div class="next">
+                        <a href="#shred-container" class="next-text">next case</a>
+                        <a href="#shred-container" class="next-icon">⏷</a>
+                    </div>
+                </div>
+            </section>
+        
+        <section id="shred-container" class="dark-text">
+            <div class="top-container">
+                <p class="top-descriptor">Digital Design</p>
+                <p class="top-year">2017</p>
             </div>
-        </section>
-
-        <section class="block light-text" id="b3">
-            <aside>
-                <p class="context1">Digital Design</p>
-                <p class="context2">2017</p>
-            </aside>
-            <div class="title-card">
-                <h3>
-                    DefenceVPN —
-                    <br> Virtual Private Network
-                </h3>
-                <a href="defencevpn.html" class="more-btn">View this case</a>
-            </div>
+            <h2>Shred4less —
+                <br> Snow Apparel Store
+            </h2>
+            <a class="view-case-btn dark-text" href="shred4less.html">View this case</a>
             <ul class="list-skills">
-                <li>Graphic design</li>
-                <li>Web design</li>
+                <li>Graphic Design</li>
+                <li>Content Production</li>
             </ul>
-            <div class="navigate">
-                <a href="#b2" class="prev">previous case</a>
-                <a href="#b4" class="next">next case</a>
-            </div>
-            </div>
-
+            <div class="bottom-container">
+                    <div class="prev">
+                        <a href="#defence-container" class="prev-text dark-text">previous case</a>
+                        <a href="#defence-container" class="prev-icon dark-text">⏶</a>
+                    </div>
+                    <div class="next">
+                        <a href="#fostering-container" class="next-text dark-text">next case</a>
+                        <a href="#fostering-container" class="next-icon dark-text">⏷</a>
+                    </div>
+                </div>
         </section>
-
-        <section class="block dark-text" id="b4">
-            <aside>
-                <p class="context1">Digital Design</p>
-                <p class="context2">2017</p>
-            </aside>
-            <div class="title-card">
-                <h3>
-                    Shred4less —
-                    <br> Snow Apparel Store
-
-                </h3>
-                <a href="shred4less.html" class="more-btn">View this case</a>
+        <section id="fostering-container">
+            <div class="top-container">
+                <p class="top-descriptor">Brand Identity</p>
+                <p class="top-year">2017</p>
             </div>
-            <ul class="list-skills">
-                <li>Logo Design</li>
-                <li>Writing</li>
-            </ul>
-            <div class="navigate">
-                <a href="#b3" class="prev">previous case</a>
-                <a href="#b5" class="next">next case</a>
-            </div>
-            </div>
-
-        </section>
-
-        <section class="block light-text" id="b5">
-            <aside>
-                <p class="context1">Brand Identity</p>
-                <p class="context2">2016</p>
-            </aside>
-            <div class="title-card">
-                <h3>
-                    Fostering Fitness —
-                    <br> Personal Trainer
-                </h3>
-                <a href="fostering-fitness.html" class="more-btn">View this case</a>
-            </div>
+            <h2>Fostering Fitness —
+                <br> Personal Trainer
+            </h2>
+            <a class="view-case-btn" href="fosteringfitness.html">View this case</a>
             <ul class="list-skills">
                 <li>Identity</li>
-                <li>UI design</li>
-                <li>Web design</li>
+                <li>Graphic Design</li>
+                <li>Web Design</li>
             </ul>
-            <div class="navigate">
-                <a href="#b4" class="prev">previous case</a>
-                <a href="#b6" class="next">next case</a>
-            </div>
-
+            <div class="bottom-container">
+                    <div class="prev">
+                        <a href="#shred-container" class="prev-text">previous case</a>
+                        <a href="#shred-container" class="prev-icon">⏶</a>
+                    </div>
+                    <div class="next">
+                        <a href="#fest16-container" class="next-text">next case</a>
+                        <a href="#fest16-container" class="next-icon">⏷</a>
+                    </div>
+                </div>
         </section>
-
-        <section class="block dark-text" id="b6">
-            <aside>
-                <p class="context1">Web Design</p>
-                <p class="context2">2016</p>
-            </aside>
-            <div class="title-card">
-                <h3>
-                    Festable —
-                    <br> Music & Arts Event
-                </h3>
-                <a href="festable2016.html" class="more-btn">View this case</a>
+        <section id="fest16-container" class="dark-text">
+            <div class="top-container">
+                <p class="top-descriptor">Web Design</p>
+                <p class="top-year">2017</p>
             </div>
+            <h2>Festable —
+                <br> Music &amp; Arts Event
+            </h2>
+            <a class="view-case-btn dark-text" href="festable2016.html">View this case</a>
             <ul class="list-skills">
                 <li>Illustration</li>
                 <li>Web Design</li>
             </ul>
-            <div class="navigate">
-                <a href="#b5" class="prev">previous case</a>
-                <a href="#b7" class="next">contact me</a>
-            </div>
-
+            <div class="bottom-container">
+                    <div class="prev">
+                        <a href="#fostering-container" class="prev-text dark-text">previous case</a>
+                        <a href="#fostering-container" class="prev-icon dark-text">⏶</a>
+                    </div>
+                    <div class="next">
+                            <a href="#contact-container" class="next-text dark-text">Lets work together</a>
+                            <a href="#contact-container" class="next-icon dark-text">⏷</a>
+                        </div>
+                </div>
         </section>
-
-        <section class="block light-text" id="b7">
-            <aside id="bottom">
-                <p class="context1">Cameron Foster Graphic & Web</p>
-                <p class="context2">cfgw@protonmail.com</p>
-            </aside>
-            <div id="contact-card">
-                <h4>
-                    Inquiries ? Get in touch !
-                </h4>
+        <section id="contact-container">
+            <div class="top-container">
+                <p class="top-descriptor">Cameron Foster Graphic &amp; Web</p>
             </div>
-            <div id="contact-container">
-                <p>If you'd like to work with me or you have any questions
-                    <br> feel free to contact me at cfgw@protonmail.com.
-                    <br> You can also use the contact form below.
-                </p>
+            <h2>Lets Work Together</h2>
+            <div id="contact-text">
+                <p>If you have any questions or would like to work with me feel free to get in touch</p>
             </div>
-            <div id="contact-form">
-                <form action="contact.php">
-                    <!-- <label for="input-name">Your name</label> -->
-                    <input type="text" id="input-name" placeholder="Name" required>
-
-                    <!-- <label for="input-email">Email address</label> -->
-                    <input type="text" id="input-email" placeholder="email" required>
-
-                    <!-- <label for="input-message">Message</label> -->
-                    <textarea id="input-message" rows="5" placeholder="Your message..." required></textarea>
-
-                    <input type="submit" id="submit" value="send message">
-                </form>
-            </div>
-            <div id="footer">
-                <a href="#top" id="top-anchor">back to top</a>
-                <p id="attribute">All rights reserved. Copyright © 2018. </p>
-                <p id="abn">ABN 313 551 656 75</p>
-            </div>
-
+            <a href="mailto:cfgw@protonmail.com">cfgw@protonmail.com</a>
         </section>
     </main>
+    <footer>
+        <div id="page-bottom">
+            <div id="top-btn">
+                <a href="#anchor-top">back to top</a>
+            </div>
+            <div id="copyright">All Rights Reserved. Copyright © 2018</div>
+            <div id="abn">
+                <p>ABN 313 551 656 75</p>
+            </div>
+        </div>
+    </footer>
 
 
 
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="./scripts/scripts.js"></script>
 
-</html>
+</body></html>

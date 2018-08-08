@@ -1,0 +1,532 @@
+@keyframes scroll-loop {
+    0% {margin-top: 3px;}
+    25% {margin-top: 6px;}
+    50% {margin-top: 3px;}
+    100% {margin-top: 3px;}
+}
+
+* {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            font-family: 'Catamaran', sans-serif;
+        }
+
+        header {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 80px;
+            padding-top: 36px;
+            /* display: none; */
+        }
+
+        aside {
+            z-index: 1;
+            width: 100%;
+        }
+
+        aside * {
+            font-weight: 200;
+            font-size: 14px;
+            margin-top: 36px;
+            position: absolute;
+            width: 200px;
+        }
+
+        .context1 {
+            left: 25%;
+        }
+
+        .context2 {
+            left: 65%;
+        }
+
+        #logo-filler {
+            position: absolute;
+            margin-left: 48px;
+            width: 64px;
+            height: 64px;
+            background: url('../img/cfgw-logo.svg');
+            border-radius: 100%;
+            z-index: 10;
+        }
+
+        /* #menu-filler {
+            position: absolute;
+            margin-right: 48px;
+            right: 0;
+            width: 48px;
+            height: 64px;
+            background: url('../img/menu.svg') no-repeat;
+            cursor: pointer;
+            z-index: 10;
+        } */
+
+        #scroll-down-filler {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            background: #F0F0F0;
+            bottom: 10vh;
+            left: 50%;
+            margin-left: -12px;
+            border-radius: 100%;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .arrow-icon {
+            color: #252525 !important;
+            margin-top: 3px;
+            text-align: center;
+        }
+        .arrow-icon:hover {
+            animation: scroll-loop 1s ease-in-out infinite;
+        }
+
+        h1,
+        h3 {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 60px;
+        }
+
+        h4 {
+            font-size: 36px;
+            font-weight: 300;
+        }
+
+        a:hover {
+            font-weight: 400;
+        }
+
+        .dark-text * {
+            color: #252525;
+        }
+
+        .light-text * {
+            color: #F0F0F0;
+        }
+
+        main {
+            width: 100vw;
+            display: block;
+        }
+        #footer {
+            position: absolute;
+            bottom: 36px;
+            font-weight: 200;
+            font-size: 12px;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+        #footer * {
+            float: left;
+            position: absolute;
+        }
+        #top-anchor {
+            left: 48px;
+        }
+        #attribute {
+            left: 65vw;
+        }
+        #abn {
+            right: 48px;
+        }
+
+        .block {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #b1 {
+            background: #252525;
+        }
+
+        #b2 {
+            background: url('../img/forest-grass-green.jpg') #F0F0F0;
+            top: 100vh;
+            background-size: cover;
+        }
+
+        #b3 {
+            background: url('../img/eorld-blue.jpg')#252525;
+            top: 200vh;
+            background-size: cover;
+        }
+
+        #b4 {
+            background: url('../img/snow-white.jpg') #F0F0F0;
+            top: 300vh;
+            background-size: cover;
+        }
+
+        #b5 {
+            background: url('../img/belly-orange.jpg') #252525;
+            top: 400vh;
+            background-size: cover;
+        }
+
+        #b6 {
+            background: url('../img/festable-desat.jpg') #F0F0F0;
+            top: 500vh;
+            background-size: cover;
+        }
+
+        #b7 {
+            background: #252525;
+            top: 600vh;
+            height: 120vh;
+        }
+
+        .title-card {
+            position: absolute;
+            top: 30vh;
+            left: 25%;
+        }
+
+        .navigate {
+            position: absolute;
+            width: 100%;
+            bottom: 10%;
+        }
+
+        .navigate * {
+            position: absolute;
+            font-weight: 300;
+            font-size: 14px;
+            width: 200px;
+        }
+
+        .prev {
+            left: 25%;
+        }
+
+        .next {
+            left: 65%;
+        }
+
+        .list-skills {
+            position: absolute;
+            left: 65%;
+            top: 40%;
+            list-style-type: none;
+        }
+
+        .list-skills li {
+            margin: 27px 0;
+        }
+
+
+        /* Contact */
+
+        #contact-card {
+            position: absolute;
+            top: 30vh;
+            left: 25%;
+        }
+        #contact-container {
+            position: absolute;
+            top: 40vh;
+            left: 25%;
+            width: 420px;
+            font-weight: 200;
+            letter-spacing: 1px;
+        }
+        #contact-form {
+            width: 400px;
+            position: absolute;
+            top: 55vh;
+            left: 25%;
+        }
+        #contact-form label {
+            font-size: 12px;
+            font-weight: 200;
+        }
+
+        input[type=text], textarea {
+            background: transparent;
+            color: #F0F0F0;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #a2a2a2;
+            box-sizing: border-box;
+            resize: none;
+            padding: 18px 0;
+            margin-bottom: 32px;
+            font-weight: 200;
+            letter-spacing: 1px;
+        }
+        input[type=text]:focus, textarea:focus {
+            outline: none;
+            border-bottom-color: #F0F0F0;
+        }
+
+        input[type=submit]{
+            background: transparent;
+            border: none;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+/* subpages */
+
+.dark {
+    background: #252525;
+}
+
+.sub-head {
+    height: 50vh;
+}
+.sub-title-card {
+    position: absolute;
+    top: 20vh;
+    left: 25%;
+}
+
+#defencevpn-head {
+    background: url('../img/eorld-blue.jpg')#252525;
+    background-size: cover;
+    z-index: 1;
+}
+#fostering-fitness-head {
+    background: url('../img/belly-orange.jpg')#252525;
+    background-size: cover;
+    z-index: 1;
+}
+#shred4less-head {
+    background: url('../img/snow-white.jpg')#252525;
+    background-size: cover;
+    z-index: 1;
+}
+#festable2016-head {
+    background: url('../img/festable-desat.jpg')#252525;
+    background-size: cover;
+    z-index: 1;
+}
+#festable2018-head {
+    background: url('../img/forest-grass-green.jpg')#252525;
+    background-size: cover;
+    z-index: 1;
+}
+
+
+#sub-container {
+    width: 100%;
+    background: #252525;
+    top: 50vh;
+    height: auto;
+    transform: translateY(560px);
+}
+#festable2016-container {
+    width: 100%;
+    background: #252525;
+    top: 70vh;
+    height: auto;
+}
+
+.sitemap {
+    margin: 48px 0 48px 64px;
+    width: 36vw;
+    min-width: 300px;
+    height: auto;
+    
+}
+
+#defencevpn-map,
+#fostering-fitness-map,
+#shred4less-map {
+    width: inherit;
+}
+
+.about-proj {
+    position: absolute;
+    top: 50vh;
+    z-index: 1;
+}
+
+#synopsis-container {
+    width: 100%;
+    height: 560px;
+    background: #252525;
+    position: absolute;
+    top: 50vh;
+}
+
+#synopsis {
+    position: absolute;
+    top: 200px;
+    left: 25vw;
+    width: 45vw;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+#synopsis h4 {
+    margin-bottom: 48px;
+}
+.site-info h4 {
+    margin-bottom: 86px;
+}
+
+.site-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 48px 64px 48px 0;
+    width: 45vw;
+    min-width: 300px;
+    height: 200px;
+}
+
+.site-info p {
+    width: 500px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.info-container {
+    height: 240px;
+}
+
+.palette-swatch {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin: 12px;
+    border-radius: 100%;
+}
+
+/* DefenceVPN Palette */
+
+#defencevpn-palette-1 {
+    background: #fff;
+}
+#defencevpn-palette-2 {
+    background: #6b7582;
+}
+#defencevpn-palette-3 {
+    background: #333;
+}
+#defencevpn-palette-4 {
+    background: #f5f5f5;
+}
+#defencevpn-palette-5 {
+    background: #288feb;
+}
+#defencevpn-palette-6 {
+    background: #f45e58;
+}
+
+/* Fostering Fitness Palette */
+
+#fostering-fitness-palette-1 {
+    background: #FFF;
+}
+#fostering-fitness-palette-2 {
+    background: #D3D3D3;
+}
+#fostering-fitness-palette-3 {
+    background: #2A3128;
+}
+#fostering-fitness-palette-4 {
+    background: #FFD18F;
+}
+#fostering-fitness-palette-5 {
+    background: #763726;
+}
+
+/* Shred4less Palette */
+
+#shred4less-palette-1 {
+    background: #FFF;
+}
+#shred4less-palette-2 {
+    background: #4F4F4F;
+}
+#shred4less-palette-3 {
+    background: #000;
+}
+#shred4less-palette-4 {
+    background: #298DCC;
+}
+#shred4less-palette-5 {
+    background: #E9E8E8;
+}
+#shred4less-palette-6 {
+    background: #186190;
+}
+
+
+
+.type-demo {
+    min-width: 100px;
+    max-width: 220px;
+    height: 100px;
+    float: left;
+    margin: 0 6vw 6vw 0;
+}
+
+.brand-demo {
+    min-width: 100px;
+    max-width: 150px;
+    margin: 0 6vw 6vw 0;
+}
+
+.brand-identity {
+    margin-top: 100px;
+    width: 500px;
+}
+
+.identity-text {
+    max-width: 34vw;
+    min-width: 300px;
+}
+
+.shred4less-identity {
+    width: 34vw;
+    margin-bottom: 64px;
+}
+
+#fostering-fitness-logo,
+#fostering-fitness-mockup, 
+#fostering-fitness-bc {
+    margin-bottom: 64px;
+    width: 34vw;
+}
+
+#sub-foot-festable-2016 {
+    margin-top: 300px;
+}
+#sub-foot-defencevpn {
+    margin-top: 360px;
+}
+#sub-foot-shred4less {
+    margin-top: 500px;
+}
+#sub-foot-ff {
+    margin-top: 500px;
+}
+
+#festable-iframe {
+    width: 36vw;
+    height: 45vw;
+    border: 6px solid #F0F0F0;
+}
+
+#back-btn {
+    text-decoration: none;
+    font-size: 38px;
+    font-weight: 200;
+    margin-left: 48px;
+}
+
+#festable2016-map{
+    max-width: 600px;
+    min-width: 200px;
+}

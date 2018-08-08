@@ -1,0 +1,115 @@
+#defence-header {
+    background: url('./img/li/world-blue.jpg') no-repeat fixed top;
+}
+#defence-swatch1 {
+    background: #FFF;
+}
+#defence-swatch2 {
+    background: #6B7582;
+}
+#defence-swatch3 {
+    background: #333;
+}
+#defence-swatch4 {
+    background: #F5F5F5;
+}
+#defence-swatch5 {
+    background: #288FEB;
+}
+#defence-swatch6 {
+    background: #F45E58;
+}
+
+#shred-header {
+    background: url('./img/li/snow-white.jpg') no-repeat fixed center;
+}
+#shred-swatch1 {
+    background: #FFF;
+}
+#shred-swatch2 {
+    background: #4F4F4F;
+}
+#shred-swatch3 {
+    background: #000;
+}
+#shred-swatch4 {
+    background: #298DCC;
+}
+#shred-swatch5 {
+    background: #E9E8E8;
+}
+#shred-swatch6 {
+    background: #186190;
+}
+
+#fostering-header {
+    background: url('./img/li/belly-orange.jpg') no-repeat fixed center;
+}
+#fostering-swatch1 {
+    background: #FFF;
+}
+#fostering-swatch2 {
+    background: #D3D3D3;
+}
+#fostering-swatch3 {
+    background: #2A3128;
+}
+#fostering-swatch4 {
+    background: #FFD18F;
+}
+#fostering-swatch5 {
+    background: #763726;
+}
+
+#fest16-header {
+    background: url('./img/li/festable-desat.jpg') no-repeat fixed center;
+}
+#fest16-footer {
+    margin-top: 100px;
+}
+.fest16-intro-container {
+    margin-top: 36px !important;
+}
+
+#fest18-header {
+    background: url('./img/li/forest-grass-green.jpg') no-repeat fixed center;
+}
+
+#fest18-site-img, #fest16-site-img {
+    margin: 0 10px;
+}
+#fest18-site-img {
+    border: 4px solid #F0F0F0;
+    height: 500px;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    #fest16-site-img {
+        margin: auto;
+    }
+    #fest18-site-img {
+        margin: auto;
+        width: 80%;
+        height: 500px
+    }
+    iframe {
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #fest16-site-img, #fest18-site-img {
+        grid-column: 1/7;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #fest16-site-img, #fest18-site-img {
+        margin: auto;
+        grid-column: 1/4;
+    }
+}
