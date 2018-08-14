@@ -105,6 +105,9 @@ iframe {
     #fest16-site-img, #fest18-site-img {
         grid-column: 1/7;
     }
+    #fest16-site-img {
+        margin: auto 20%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
