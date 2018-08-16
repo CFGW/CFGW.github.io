@@ -1,5 +1,5 @@
 #defence-header {
-    background: url('./img/li/world-blue.jpg') no-repeat fixed top;
+    background: url('./img/li/world-blue.png') no-repeat fixed top;
 }
 #defence-swatch1 {
     background: #FFF;
@@ -114,5 +114,14 @@ iframe {
     #fest16-site-img, #fest18-site-img {
         margin: auto;
         grid-column: 1/4;
+    }
+    #defence-footer {
+        transform: translateY(150px);
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #defence-footer {
+        transform: translateY(200px);
     }
 }
