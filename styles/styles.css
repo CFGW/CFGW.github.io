@@ -8,6 +8,94 @@ body, html {
     font-weight: 100;
 }
 /* MISC START */
+/* MENU START */
+.menu-active {
+    transition: all .7s ease;
+}
+.menu-opaic {
+    z-index: 2;
+}
+.top, .middle, .bottom {
+    transition: all .7s ease;
+}
+.menu-button {
+    background: #252529;
+    cursor: pointer;
+    width: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 16px 20px;
+    transition: all .7s ease;
+    display: inline-block;
+    z-index: 2;
+    border-radius: 0 0 0 26px;
+}
+.menu-button.menu-active .top {
+    transform: translateY(15px) rotateZ(45deg);
+}
+.menu-button.menu-active .bottom {
+    transform: translateY(-15px) rotateZ(-45deg);
+}
+.menu-button.menu-active .middle {
+    width: 0;
+}
+.bar {
+    display: block;
+    background: #F0F0F0;
+    height: 5px;
+    width: 100%;
+    margin: 10px auto;
+}
+.menu {
+    height: 100vh;
+    position: fixed;
+    background: #FF7070;
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+    transition: all .7s ease;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    cursor: context-menu;
+}
+.menu.opaic {
+    transition: all .7s ease;
+    opacity: 1 !important;
+    cursor: auto;
+    z-index: 1;
+}
+#menu-list {
+    width: auto;
+    margin: auto;
+    list-style-type: none;
+}
+#menu-list>* {
+    text-align: right;
+}
+#menu-list li a {
+    font-size: 3.4em;
+    font-weight: 400;
+    text-decoration: none;
+}
+#menu-list li a:hover {
+    color: #64FFDA;
+}
+#menu-list li:nth-child(1) a,
+#menu-list li:nth-child(2) a,
+#menu-list li:nth-child(8) a {
+    color: #252529;
+    font-size: 4em;
+}
+#menu-list li:nth-child(2) a {
+    cursor: context-menu;
+}
+#menu-list li:nth-child(1) a:hover,
+#menu-list li:nth-child(8) a:hover {
+    color: #64FFDA;
+}
+/* MENU END */
 /* Background Images Start */
 #fest18-container {
     background: url('./img/li/forest-grass-green.jpg') fixed;
@@ -259,6 +347,21 @@ footer {
 }
 
 @media only screen and (min-width: 800px) {
+    /* MENU START */
+    .menu-button {
+        width: 40px;
+        padding: 14px 20px 16px 22px;
+    }
+    .menu-button.menu-active .top {
+        transform: translateY(14px) rotateZ(45deg);
+    }
+    .menu-button.menu-active .bottom {
+        transform: translateY(-14px) rotateZ(-45deg);
+    }
+    .bar {
+        height: 4px;
+    }
+    /* MENU END */
     .top-descriptor, .top-year, #top-email {
         padding-top: 32px;
     }
