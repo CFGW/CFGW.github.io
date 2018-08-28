@@ -231,7 +231,7 @@ h1, h2 {
     display: none;
 }
 .next-icon, .prev-icon {
-    font-size: 4em;
+    font-size: 2.4em;
     line-height: 1em;
 }
 .next-icon a, .prev-icon a {
