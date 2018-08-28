@@ -14,12 +14,24 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 
 // MENU
 $(document).ready(function () {
-    $(".menu-button").on("click tap", function () {
-        $(".menu-button").toggleClass("menu-active");
+    $("#menu-button").on("click tap", function () {
+        $("#menu-button").toggleClass("menu-active");
         $(".menu").toggleClass("opaic");
     });
     $("#menu-list li a").on("click tap", function () {
-        $(".menu-button").toggleClass("menu-active");
+        $("#menu-button").toggleClass("menu-active");
         $(".menu").toggleClass("opaic");
     })
 });
+
+//MENU SCROLL
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("menu-button").style.top = "0";
+  } else {
+    document.getElementById("menu-button").style.top = "-90px";
+  }
+  prevScrollpos = currentScrollPos;
+} 

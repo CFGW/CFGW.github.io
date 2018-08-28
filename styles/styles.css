@@ -21,7 +21,7 @@ body, html {
 .top, .middle, .bottom {
     transition: all .7s ease;
 }
-.menu-button {
+#menu-button {
     background: #252529;
     cursor: pointer;
     width: 40px;
@@ -34,13 +34,13 @@ body, html {
     z-index: 2;
     border-radius: 0 0 0 26px;
 }
-.menu-button.menu-active .top {
+#menu-button.menu-active .top {
     transform: translateY(14px) rotateZ(45deg);
 }
-.menu-button.menu-active .bottom {
+#menu-button.menu-active .bottom {
     transform: translateY(-14px) rotateZ(-45deg);
 }
-.menu-button.menu-active .middle {
+#menu-button.menu-active .middle {
     width: 0;
 }
 .bar {
