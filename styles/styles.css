@@ -8,6 +8,9 @@ body, html {
     font-weight: 100;
 }
 /* MISC START */
+.next-icon, .prev-icon, #scroll-down {
+    font-family: 'SymbolaRegular';
+}
 /* MENU START */
 .menu-active {
     transition: all .7s ease;
