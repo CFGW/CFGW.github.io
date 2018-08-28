@@ -24,21 +24,21 @@ body, html {
 .menu-button {
     background: #252529;
     cursor: pointer;
-    width: 50px;
+    width: 40px;
     position: fixed;
     top: 0;
     right: 0;
-    padding: 16px 20px;
+    padding: 14px 20px 16px 22px;
     transition: all .7s ease;
     display: inline-block;
     z-index: 2;
     border-radius: 0 0 0 26px;
 }
 .menu-button.menu-active .top {
-    transform: translateY(15px) rotateZ(45deg);
+    transform: translateY(14px) rotateZ(45deg);
 }
 .menu-button.menu-active .bottom {
-    transform: translateY(-15px) rotateZ(-45deg);
+    transform: translateY(-14px) rotateZ(-45deg);
 }
 .menu-button.menu-active .middle {
     width: 0;
@@ -46,7 +46,7 @@ body, html {
 .bar {
     display: block;
     background: #F0F0F0;
-    height: 5px;
+    height: 4px;
     width: 100%;
     margin: 10px auto;
 }
@@ -350,21 +350,6 @@ footer {
 }
 
 @media only screen and (min-width: 800px) {
-    /* MENU START */
-    .menu-button {
-        width: 40px;
-        padding: 14px 20px 16px 22px;
-    }
-    .menu-button.menu-active .top {
-        transform: translateY(14px) rotateZ(45deg);
-    }
-    .menu-button.menu-active .bottom {
-        transform: translateY(-14px) rotateZ(-45deg);
-    }
-    .bar {
-        height: 4px;
-    }
-    /* MENU END */
     .top-descriptor, .top-year, #top-email {
         padding-top: 32px;
     }
