@@ -39,6 +39,7 @@ header {
     margin-top: 16px;
 }
 #back-btn {
+    font-family: 'SymbolaRegular';
     grid-row: 1;
     grid-column: 1;
     font-size: 3em;
