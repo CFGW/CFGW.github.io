@@ -173,8 +173,11 @@ footer {
     padding: 0 0 32px 9vw;
     font-size: 1em;
 }
-#top-btn, #copyright, footer p {
+#top-btn, #fest-copyright, footer p {
     font-size: 3em;
+}
+#copyright {
+    font-size: 18px;
 }
 /* FOOTER END */
 
