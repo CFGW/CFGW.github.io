@@ -1,5 +1,0 @@
-#AuthUserFile /var/www/asiakkaat/up/.htpasswd
-AuthUserFile c:\xampp\htdocs\up\.htpasswd
-AuthName "Please Log In"
-AuthType Basic
-require valid-user

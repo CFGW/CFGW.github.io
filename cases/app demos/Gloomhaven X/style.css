@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+html {
+    background-color: #8a005e;
+background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+body {
+    background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+}
+/* scroll */
+::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+  }
+  ::-webkit-scrollbar-track {
+    box-sizing: border-box;
+    border-left: 1px solid rgb(139, 119, 96);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(139, 119, 96);
+    box-sizing: border-box;
+    border-left: 1px solid rgb(139, 119, 96);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(189, 148, 102);
+  }
+/* Overlay, Discard Menu, Lost Menu, Cards Menu */
+/* Overlay Menu */
+.overlay, .discard-menu, .lost-menu, .card-menu {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.9);
+    position: absolute;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poiret One', cursive;
+}
+.overlay.open, .discard-menu.open, .lost-menu.open, .card-menu.open, 
+.char-sheet-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s
+}
+.menu-close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: 'Poiret One', cursive;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0px 0px 20px #fff, 0px 0px 20px #fff;
+    background: none;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    transition: text-shadow 350ms ease-in-out;
+}
+.menu-close:hover {
+    text-shadow: none;
+}
+.overlay h2 {
+    perspective: 1200px;
+    transform: translateY(-25%) rotateX(35deg);
+    transition: transform 0.5s, opacity 0.5s;
+}
+.overlay.open h2 {
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+.tiny-text {
+    font-size: .7rem;
+}
+/* Discard Menu, Lost Menu */
+.discard-container, .lost-container {
+    width: 972px;
+    height: 452px;
+    border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.discard-container-space, .lost-container-space, .card-container-space {
+    background-image: url('./images/cards/001-bladeswarm-discard.png');
+    background-size: contain;
+    border: 1px dashed rgb(173, 173, 173);
+    width: 160px;
+    height: 224px;
+    position: relative;
+}
+.card-container-space {
+    /* transition: all 350ms ease-in-out; */
+    float: left;
+}
+
+/* Card Menu */
+.card-container {
+    width: 982px;
+    height: 904px;
+    border: 1px solid rgb(139, 119, 96);
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    bottom: 10px;
+}
+.card-menu h2 {
+    position: absolute;
+    top: 0;
+}
+.card-container__array-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+#card-container__array-list {
+    color: white;
+}
+#card-container__array-list li {
+    cursor: pointer;
+    width: 260px;
+    transition: all 350ms ease-in-out;
+    list-style-type: none;
+    position: relative;
+    mix-blend-mode: hard-light;
+}
+#card-container__array-list li:before {
+    display: block;
+    font-weight: bold;
+    text-align: right;
+    content: ' ';
+    width: 0;
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 350ms ease-in-out, padding-left 250ms ease-in-out, color 600ms ease-in-out, opacity 500ms ease-in-out;
+    color: white;
+}
+#card-container__array-list li:hover:before {
+    content: 'x';
+    opacity: 1;
+    color: red;
+    width: 30px;
+    height: 100%;
+    margin-left: -40px;
+    padding-left: 4px;
+    position: absolute;
+}
+
+.card-container__viewer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 320px;
+    height: 448px;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+
+/* Gameboard */
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* .top, .middle, .bottom {
+    border: 2px dashed black;
+    width: 100%;
+    box-sizing: border-box;
+} */
+.top, .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top {
+    height: 35%;
+}
+.bottom {
+    height: 35%;
+}
+.card-space {
+    background: url('./images/cards/000-bladeswarm-back-transparent.png') no-repeat;
+    background-size: cover;
+    width: 160px;
+    height: 224px;
+    transition: all 350ms ease-in-out;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 1px 1px 4px black;
+}
+.card-space:hover {
+    width: 216px !important;
+    height: 302px !important;
+    box-shadow: 2px 2px 10px black;
+}
+.card-space > .btn-container, .discard-space > .btn-container,
+.lost-space > .btn-container, .discard-container-space > .btn-container,
+.lost-container-space > .btn-container, .char-sheet > .btn-container,
+.card-container-space > .btn-container {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    transition: all 250ms ease-in-out;
+    overflow: hidden;
+    width: 0;
+    height: 30px;
+    padding-left: 6px;
+}
+.char-sheet > .btn-container {
+    right: 0;
+}
+.card-space:hover > .btn-container, .discard-space:hover > .btn-container,
+.lost-space:hover > .btn-container, .discard-container-space:hover > .btn-container,
+.lost-container-space:hover > .btn-container, .card-container-space:hover > .btn-container {
+    width: 100%;
+}
+.char-sheet:hover > .btn-container {
+    width: 30px;
+}
+/* Top */
+.active-space {
+    visibility: hidden;
+    width: 0;
+}
+
+/* Middle */
+.middle {
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-8px);
+}
+.middle h3 {
+    font-family: 'Poiret One', cursive;
+    text-align: left;
+}
+.selected-cards h3 {
+    margin-left: 36px;
+}
+.modifiers h3 {
+    margin-left: 100px;
+}
+.selected-cards, .modifiers {
+    color: lightgray;
+    width: 400px;
+    height: 100%;
+    position: relative;
+    transform: translateY(-40px);
+}
+.selected-cards__container, .modifiers__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* modifiers */
+.modifiers__container {
+    flex-direction: column;
+}
+.modifiers__top, .modifiers__bottom {
+    width: 200px;
+    height: 127px;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+.modifiers__top {
+    background: url('./images/modifiers/modifier-back.png') center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px black;
+    transition: box-shadow 350ms ease-in-out
+}
+.modifiers__top:hover {
+    box-shadow: 0 0 20px white;
+}
+.modifiers__bottom {
+    border: 1px dashed rgb(173, 173, 173);
+    transition: filter 350ms ease-in-out 700ms;
+}
+.modifier-fade {
+    filter: brightness(0);
+}
+.modifiers > .btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    position: absolute;
+    right: 90px;
+    top: 15px;
+    z-index: 1;
+}
+.bless-container, .curse-container {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.bless-container {
+    background: url('./images/icons/crit-icon.png');
+    background-size: contain;
+}
+.curse-container {
+    background: url('./images/icons/curse-icon.png');
+    background-size: contain;
+}
+.bless-container:before, .curse-container:before {
+    display: block;
+    content: '';
+    height: 0;
+    width: 30px;
+    transition: all 350ms ease-in-out;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    z-index: -1;
+}
+.bless-container:hover:before, .curse-container:hover:before {
+    height: 86px;
+}
+.bless-container button, .curse-container button {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    margin: 5px 0;
+    background: none;
+    box-sizing: border-box;
+    border: none;
+    /* border: 1px solid white; */
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+.bless-container:hover button, .curse-container:hover button {
+    visibility: visible;
+    opacity: 1;
+}
+.add-bless:hover, .remove-curse:hover {
+    color: greenyellow;
+}
+.remove-bless:hover, .add-curse:hover {
+    color: orangered;
+}
+/* selected cards */
+.selected-cards__left, .selected-cards__right {
+    width: 160px;
+    height: 224px;
+    margin: 10px;
+    z-index: 100;
+    border-radius: 7px;
+}
+.selected-cards__left:hover, .selected-cards__right:hover {
+    width: 238px !important;
+}
+/* buttons misc */
+.select-btn, .discard-btn, .lost-btn, .active-btn, .discard-menu-btn, .char-sheet-menu-btn,
+.lost-menu-btn, .discard-recover-btn, .lost-recover-btn, .flip-btn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: .3;
+    border: none;
+    outline: none;
+}
+.select-btn:hover, .discard-btn:hover, .lost-btn:hover, .active-btn:hover, 
+.discard-menu-btn:hover, .char-sheet-menu-btn:hover, .lost-menu-btn:hover, 
+.discard-recover-btn:hover, .lost-recover-btn:hover, .flip-btn:hover {
+    opacity: 1;
+}
+.select-btn {
+    background: url('./images/icons/select-icon.png') center no-repeat;
+    background-size: contain;
+}
+.discard-btn {
+    background: url('./images/icons/discard-icon.png') center no-repeat;
+    background-size: contain;
+}
+.lost-btn {
+    background: url('./images/icons/lost-icon.png') center no-repeat;
+    background-size: contain;
+}
+.active-btn {
+    background: url('./images/icons/active-icon.png') center no-repeat;
+    background-size: contain;
+}
+.shuffle-btn {
+    background: url('./images/icons/shuffle-icon.png') center no-repeat;
+    background-size: contain;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 350ms ease-in-out;
+}
+.shuffle-btn:hover {
+    transform: rotate(180deg)
+}
+.flip-btn {
+    background: url('./images/icons/flip-icon.png') center no-repeat;
+    background-size: contain;
+    width: 28px;
+    height: 28px;
+}
+.discard-menu-btn, .lost-menu-btn, .char-sheet-menu-btn {
+    background: url('./images/icons/menu-icon.png');
+    background-size: contain;
+}
+.discard-recover-btn, .lost-recover-btn {
+    background: url('./images/icons/recover-icon.png');
+    background-size: contain;
+}
+
+.discard-space, .lost-space {
+    background-image: url('./images/cards/001-bladeswarm-discard.png');
+    background-size: contain;
+    border: 1px dashed rgb(173, 173, 173);
+    width: 160px;
+    height: 224px;
+    position: relative;
+}
+.char-sheet {
+    background-image: url('./images/bladeswarm-character-card.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 334px;
+    box-shadow: 5px 5px 12px #000;
+    position: relative;
+}
+.char-sheet-menu {
+    width: 500px;
+    height: 334px;
+    background: rgba(0,0,0,.9);
+    position: absolute;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: 'Poiret One', cursive;
+}
+.char-sheet-menu * > p {
+    margin: 4px;
+}
+.stats-container {
+    height: 120px;
+    width: 138px;
+    margin-right: 20px;
+}
+.stats-container p {
+    text-align: center;
+    font-size: .8rem;
+    width: 60px;
+}
+.active-conditions-container {
+    width: 180px;
+    height: 52px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 14px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+.active-conditions-container > .conditions:nth-child(7) {
+    grid-column-start: 2;
+    margin: -8px 0 0 -15px;
+}
+.active-conditions-container > .conditions:nth-child(8) {
+    grid-column-start: 3;
+    margin: -8px 0 0 -15px;
+}
+.active-conditions-container > .conditions:nth-child(9) {
+    grid-column-start: 4;
+    margin: -8px 0 0 -15px;
+}
+.conditions-container {
+    height: 100px;
+    width: 300px;
+    margin-left: 20px;
+}
+.conditions-icon-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+.conditions:hover {
+    filter: brightness(2);
+}
+.lvl-container, .hp-container, .xp-container, .gold-container {
+    display: flex;
+    height: 30px;
+    width: 100%;
+}
+.lvl-icon, .hp-icon, .xp-icon, .gold-icon, .left-icon, .right-icon {
+    width: 26px;
+    height: 26px;
+}
+.lvl-icon, .hp-icon, .xp-icon, .gold-icon {
+    margin-right: 12px;
+}
+.left-icon, .right-icon {
+    cursor: pointer;
+    transition: filter 350ms ease-in-out;
+}
+.left-icon:hover, .right-icon:hover {
+    filter:brightness(.8) sepia(.8) saturate(300%) hue-rotate(10deg)
+}
+.lvl-icon {
+    background-image: url('./images/icons/lvl-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.hp-icon {
+    background-image: url('./images/icons/hp-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.xp-icon {
+    background-image: url('./images/icons/xp-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.gold-icon {
+    background-image: url('./images/icons/gold-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.left-icon {
+    background-image: url('./images/icons/left-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.right-icon {
+    background-image: url('./images/icons/right-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.immobolize-icon, .disarm-icon, .strengthen-icon, .invisible-icon, .poison-icon,
+.stun-icon, .muddle-icon, .wound-icon, .regenerate-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    transition: transform 250ms ease-in-out;
+}
+.immobolize-icon {
+    background-image: url('./images/icons/immobolize-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.disarm-icon {
+    background-image: url('./images/icons/disarm-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.strengthen-icon {
+    background-image: url('./images/icons/strengthen-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.invisible-icon {
+    background-image: url('./images/icons/invisible-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.poison-icon {
+    background-image: url('./images/icons/poison-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.stun-icon {
+    background-image: url('./images/icons/stun-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.muddle-icon {
+    background-image: url('./images/icons/muddle-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.wound-icon {
+    background-image: url('./images/icons/wound-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.regenerate-icon {
+    background-image: url('./images/icons/regenerate-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.rotate {
+    transform: rotate(0);
+    filter: grayscale(100%);
+    pointer-events: none;
+}
+
+/* hand */
+
+.card-menu-btn, .populate-hand-btn {
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.15rem;
+    transition: text-shadow 350ms ease-in-out, color 350ms ease-in-out;
+    text-shadow: 0 0 0  rgb(182, 123, 45)
+}
+.card-menu-btn:hover, .populate-hand-btn:hover {
+    color: rgb(255, 215, 162);
+    text-shadow: -.5px 0 0 rgb(255, 215, 162), 
+    .5px 0 0 rgb(255, 215, 162), 
+    10px 10px 10px rgb(182, 123, 45), 
+    -10px -10px 10px rgb(182, 123, 45);
+}
+
+
+/* card menu cards */
+.deck-back {
+    background: url('./images/cards/00-bladeswarm-back.png') center no-repeat;
+    background-size: cover;
+}
+.deck-0 {
+    background: url('./images/cards/01-deflecting-blades.png') center no-repeat;
+    background-size: cover;
+}
+.deck-1 {
+    background: url('./images/cards/02-corrupting-parasites.png') center no-repeat;
+    background-size: cover;
+}
+.deck-2 {
+    background: url('./images/cards/03-hive-mind.png') center no-repeat;
+    background-size: cover;
+}
+.deck-3 {
+    background: url('./images/cards/04-omniscient-assault.png') center no-repeat;
+    background-size: cover;
+}
+.deck-4 {
+    background: url('./images/cards/05-death-march.png') center no-repeat;
+    background-size: cover;
+}
+.deck-5 {
+    background: url('./images/cards/06-engulfing-stingers.png') center no-repeat;
+    background-size: cover;
+}
+.deck-6 {
+    background: url('./images/cards/07-call-of-the-grave.png') center no-repeat;
+    background-size: cover;
+}
+.deck-7 {
+    background: url('./images/cards/08-venomous-barbs.png') center no-repeat;
+    background-size: cover;
+}
+.deck-8 {
+    background: url('./images/cards/09-scattered-defense.png') center no-repeat;
+    background-size: cover;
+}
+.deck-9 {
+    background: url('./images/cards/10-swarming-minions.png') center no-repeat;
+    background-size: cover;
+}
+.deck-10 {
+    background: url('./images/cards/11-the-storms-edge.png') center no-repeat;
+    background-size: cover;
+}
+.deck-11 {
+    background: url('./images/cards/12-unstoppable-army.png') center no-repeat;
+    background-size: cover;
+}
+.deck-12 {
+    background: url('./images/cards/13-grasping-advance.png') center no-repeat;
+    background-size: cover;
+}
+.deck-13 {
+    background: url('./images/cards/14-tomb-of-the-immortal.png') center no-repeat;
+    background-size: cover;
+}
+.deck-14 {
+    background: url('./images/cards/15-vampiric-tempest.png') center no-repeat;
+    background-size: cover;
+}
+.deck-15 {
+    background: url('./images/cards/16-infest.png') center no-repeat;
+    background-size: cover;
+}
+.deck-16 {
+    background: url('./images/cards/17-putrid-grubs.png') center no-repeat;
+    background-size: cover;
+}
+.deck-17 {
+    background: url('./images/cards/18-sand-scythe.png') center no-repeat;
+    background-size: cover;
+}
+.deck-18 {
+    background: url('./images/cards/19-sword-of-tenacity.png') center no-repeat;
+    background-size: cover;
+}
+.deck-19 {
+    background: url('./images/cards/20-incubation.png') center no-repeat;
+    background-size: cover;
+}
+.deck-20 {
+    background: url('./images/cards/21-bioluminescence.png') center no-repeat;
+    background-size: cover;
+}
+.deck-21 {
+    background: url('./images/cards/22-bone-daggers.png') center no-repeat;
+    background-size: cover;
+}
+.deck-22 {
+    background: url('./images/cards/23-prismatic-cyclone.png') center no-repeat;
+    background-size: cover;
+}
+.deck-23 {
+    background: url('./images/cards/24-erosion.png') center no-repeat;
+    background-size: cover;
+}
+.deck-24 {
+    background: url('./images/cards/25-solitary-horde.png') center no-repeat;
+    background-size: cover;
+}
+.deck-25 {
+    background: url('./images/cards/26-sunstroke.png') center no-repeat;
+    background-size: cover;
+}
+.deck-26 {
+    background: url('./images/cards/27-focused-scourge.png') center no-repeat;
+    background-size: cover;
+}
+.deck-27 {
+    background: url('./images/cards/28-blood-drain.png') center no-repeat;
+    background-size: cover;
+}
+.deck-28 {
+    background: url('./images/cards/29-wasteland.png') center no-repeat;
+    background-size: cover;
+}
+.deck-29 {
+    background: url('./images/cards/30-oasis.png') center no-repeat;
+    background-size: cover;
+}
+.deck-flipped {
+    background: url('./images/cards/00-bladeswarm-back.png') center no-repeat;
+    background-size: cover;
+}
+
+/* bottom */
+
+.hand-container {
+    display: flex;
+    align-items: center;
+}
+
+.cards-in-hand {
+    width: 140px;
+    overflow: hidden;
+    background-position: left;
+}
+.cards-in-hand:hover, .cards-in-hand:last-child {
+    width: 160px;
+    overflow: visible;
+    border-radius: 7px;
+}
