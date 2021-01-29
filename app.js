@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navContainer = document.getElementById('nav-container')
     const navWorkBtn = document.getElementById('nav-work-btn')
     const navContactBtn = document.getElementById('nav-contact-btn')
+    const navMobileContactBtn = document.getElementById('mobile-nav-contact-btn')
     const contactContainer = document.querySelector('.contact-container')
     const contactCloseBtn = document.getElementById('contact-close-btn')
 
@@ -195,17 +196,26 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     // Contact functionality
-    navContactBtn.addEventListener('click', () => {
+    navContactBtn.addEventListener('click', contactFunction)
+    navMobileContactBtn.addEventListener('click', contactFunction)
+
+    function contactFunction() {
         contactContainer.classList.remove('no-display')
-        setTimeout(() => {
+        setTimeout(()=> {
             contactContainer.classList.remove('invis')
-        }, 30)
-    })
-    contactCloseBtn.addEventListener('click', () => {
+        },30)
+        // prevent scroll on smaller screen sizes
+        preventScroll()
+    }
+
+
+    contactCloseBtn.addEventListener('click', ()=> {
         contactContainer.classList.add('invis')
-        setTimeout(() => {
+        setTimeout(()=> {
             contactContainer.classList.add('no-display')
-        }, 350)
+        },350)
+        // prevent scroll on smaller screen sizes
+        allowScroll()
     })
 
 

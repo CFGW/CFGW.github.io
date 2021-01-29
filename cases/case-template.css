@@ -856,15 +856,15 @@ p {
     bottom: 0;
     background-color: #31ac9f;
     background-image: url("../img/45-degree-fabric-light.png");
-    height: 64px;
+    height: 42px;
     width: 100vw;
     z-index: 1000;
   }
   #mobile-nav-container a {
     background-color: white;
     background-image: url("../img/45-degree-fabric-light.png");
-    width: 42px;
-    height: 42px;
+    width: 32px;
+    height: 32px;
     margin: 0 48px;
   }
   #mobile-nav-container #mobile-nav-home-btn {
@@ -887,7 +887,7 @@ p {
 
 @media (max-width: 560px) {
   #menu-list-container ul {
-    font-size: 3em;
+    font-size: 2em;
     padding-right: 64px;
   }
   .contact-container #contact-modal {

@@ -665,15 +665,15 @@ p {
         bottom: 0;
         background-color: $color2;
         background-image: $fabric;
-        height: 64px;
+        height: 42px;
         width: 100vw;
         z-index: 1000;
 
         a {
             background-color: white;
             background-image: $fabric;
-            width: 42px;
-            height: 42px;
+            width: 32px;
+            height: 32px;
             margin: 0 48px;
         }
 
@@ -700,7 +700,7 @@ p {
 @media (max-width: 560px) {
 
     #menu-list-container ul {
-        font-size: 3em;
+        font-size: 2em;
         padding-right: 64px;
     }
     .contact-container #contact-modal {

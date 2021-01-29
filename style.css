@@ -855,15 +855,15 @@ h3 {
             align-items: center;
     position: fixed;
     bottom: 0;
-    height: 64px;
+    height: 42px;
     width: 100vw;
     z-index: 1000;
   }
   #mobile-nav-container a {
     background-color: white;
     background-image: url("./img/45-degree-fabric-light.png");
-    width: 42px;
-    height: 42px;
+    width: 32px;
+    height: 32px;
     margin: 0 48px;
     z-index: 1000;
   }
@@ -882,7 +882,7 @@ h3 {
 
 @media (max-width: 560px) {
   h1 {
-    font-size: 3.6em;
+    font-size: 2.2em;
   }
   h3 {
     font-size: .7em;
@@ -893,7 +893,7 @@ h3 {
     margin-left: 6px;
   }
   #menu-list-container ul {
-    font-size: 3em;
+    font-size: 2em;
     padding-right: 64px;
   }
   #work-image-container {
