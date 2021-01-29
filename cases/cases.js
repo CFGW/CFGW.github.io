@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightboxModalImg = document.querySelector('.lightbox-modal-img')
     const navWorkBtn = document.getElementById('nav-work-btn')
     const navContactBtn = document.getElementById('nav-contact-btn')
+    const navMobileContactBtn = document.getElementById('mobile-nav-contact-btn')
     const contactContainer = document.querySelector('.contact-container')
     const contactCloseBtn = document.getElementById('contact-close-btn')
     const spoiler = document.querySelector('.img-spoiler')
@@ -43,8 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 casesMenu.classList.remove('cases-menu-close')
             }, 600)
             // prevent scroll on smaller screen sizes
-            document.querySelector('body').style.overflowY = "auto"
-            document.querySelector('html').style.overflowY = "auto"
+            allowScroll()
         } else {
             // menuBtn
             mbMid.classList.add('no-width')
@@ -65,8 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 casesMenu.classList.add('cases-menu-open')
             }, 200)
             // prevent scroll on smaller screen sizes
-            document.querySelector('body').style.overflowY = "hidden"
-            document.querySelector('html').style.overflowY = "hidden"
+            preventScroll()
         }
 
     }
@@ -103,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(()=> {
                 lightboxContainer.classList.remove('invis')
             },30)
-            
+            preventScroll()
         })
     })
     lightboxContainer.addEventListener('click', (e) => {
@@ -114,27 +113,31 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(()=> {
                 lightboxContainer.classList.add('no-display')
             },350)
+            allowScroll()
         }
     })
 
     // Contact functionality
-    navContactBtn.addEventListener('click', () => {
+    navContactBtn.addEventListener('click', contactFunction)
+    navMobileContactBtn.addEventListener('click', contactFunction)
+
+    function contactFunction() {
         contactContainer.classList.remove('no-display')
         setTimeout(()=> {
             contactContainer.classList.remove('invis')
         },30)
         // prevent scroll on smaller screen sizes
-        document.querySelector('body').style.overflowY = "hidden"
-        document.querySelector('html').style.overflowY = "hidden"
-    })
+        preventScroll()
+    }
+
+
     contactCloseBtn.addEventListener('click', ()=> {
         contactContainer.classList.add('invis')
         setTimeout(()=> {
             contactContainer.classList.add('no-display')
         },350)
         // prevent scroll on smaller screen sizes
-        document.querySelector('body').style.overflowY = "auto"
-        document.querySelector('html').style.overflowY = "auto"
+        allowScroll()
     })
 
     // Spoiler functionality
@@ -142,6 +145,15 @@ document.addEventListener("DOMContentLoaded", () => {
         spoiler.addEventListener('click', ()=> {
             caseScreenContainer.classList.remove('img-spoiler')
         })
+    }
+
+    function preventScroll() {
+        document.querySelector('body').style.overflowY = "hidden"
+        document.querySelector('html').style.overflowY = "hidden"
+    }
+    function allowScroll() {
+        document.querySelector('body').style.overflowY = "auto"
+        document.querySelector('html').style.overflowY = "auto"
     }
     
 
