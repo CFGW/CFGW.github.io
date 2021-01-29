@@ -109,6 +109,8 @@ header {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   margin: 5px 0;
+  -webkit-box-shadow: 1px 1px 1px #34837b;
+          box-shadow: 1px 1px 1px #34837b;
 }
 
 #menu-list-container {
@@ -406,12 +408,16 @@ h3 {
   -webkit-transform: translateY(14px) rotate(45deg);
           transform: translateY(14px) rotate(45deg);
   background: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .mb-bottom-rotate {
   -webkit-transform: translateY(-14px) rotate(-45deg);
           transform: translateY(-14px) rotate(-45deg);
   background: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .head-square-view-work-open {
@@ -882,6 +888,10 @@ h3 {
 }
 
 @media (max-width: 560px) {
+  #menu-container {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
   h1 {
     font-size: 1.8em;
   }

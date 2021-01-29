@@ -36,6 +36,7 @@ html, body {
     position: relative;
     transition: all 300ms ease-in-out;
     margin: 5px 0;
+    box-shadow: 1px 1px 1px $lowColor2;
 }
 
 main {
@@ -300,10 +301,12 @@ p {
 .mb-top-rotate {
     transform: translateY(14px) rotate(45deg);
     background: white;
+    box-shadow: none;
 }
 .mb-bottom-rotate {
     transform: translateY(-14px) rotate(-45deg);
     background: white;
+    box-shadow: none;
 }
 .li-selected, .li-selected > * {
     color: white;
@@ -699,6 +702,9 @@ p {
 }
 
 @media (max-width: 560px) {
+    #menu-container {
+        transform: scale(.7);
+    }
 
     #menu-list-container ul {
         font-size: 1.8em;
