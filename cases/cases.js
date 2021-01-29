@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navWorkBtn = document.getElementById('nav-work-btn')
     const navContactBtn = document.getElementById('nav-contact-btn')
     const navMobileContactBtn = document.getElementById('mobile-nav-contact-btn')
+    const navMobileContainer = document.getElementById('mobile-nav-container')
     const contactContainer = document.querySelector('.contact-container')
     const contactCloseBtn = document.getElementById('contact-close-btn')
     const spoiler = document.querySelector('.img-spoiler')
@@ -37,12 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 menuListContainer.classList.add('no-display')
                 workImgContainer.classList.add('no-display')
             }, 350)
+            // Nav
+            navMobileContainer.classList.remove('no-display')
+            setTimeout(() => {
+                navMobileContainer.classList.remove('invis')
+            }, 30)
             // casesMenu
             casesMenu.classList.remove('cases-menu-open')
             casesMenu.classList.add('cases-menu-close')
             setTimeout(() => {
                 casesMenu.classList.remove('cases-menu-close')
             }, 600)
+            
             // prevent scroll on smaller screen sizes
             allowScroll()
         } else {
@@ -54,6 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
             menuListContainer.classList.remove('no-display')
             // workImg
             workImgContainer.classList.remove('no-display')
+            // Nav
+            navMobileContainer.classList.add('invis')
+            setTimeout(() => {
+                navMobileContainer.classList.add('no-display')
+            }, 350)
             setTimeout(() => {
                 menuListContainer.classList.remove('invis')
                 menuListContainer.classList.remove('no-scale')

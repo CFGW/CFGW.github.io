@@ -857,7 +857,9 @@ h3 {
     bottom: 0;
     height: 42px;
     width: 100vw;
-    z-index: 1000;
+    z-index: 100;
+    -webkit-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out;
   }
   #mobile-nav-container a {
     background-color: white;
@@ -865,7 +867,6 @@ h3 {
     width: 32px;
     height: 32px;
     margin: 0 48px;
-    z-index: 1000;
   }
   #mobile-nav-container #mobile-nav-home-btn {
     -webkit-mask-image: url("./img/home.svg");
@@ -907,6 +908,9 @@ h3 {
   }
   .contact-container #contact-modal {
     width: 92%;
+  }
+  .contact-container #contact-modal p {
+    width: 300px;
   }
   #head-circle {
     -webkit-clip-path: circle(0% at 45% 52%);

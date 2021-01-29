@@ -858,7 +858,9 @@ p {
     background-image: url("../img/45-degree-fabric-light.png");
     height: 42px;
     width: 100vw;
-    z-index: 1000;
+    z-index: 100;
+    -webkit-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out;
   }
   #mobile-nav-container a {
     background-color: white;
@@ -887,11 +889,14 @@ p {
 
 @media (max-width: 560px) {
   #menu-list-container ul {
-    font-size: 2em;
+    font-size: 1.8em;
     padding-right: 64px;
   }
   .contact-container #contact-modal {
     width: 92%;
+  }
+  .contact-container #contact-modal p {
+    width: 300px;
   }
   #overview-subheading {
     font-size: .7em;

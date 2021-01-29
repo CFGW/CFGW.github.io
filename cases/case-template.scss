@@ -667,7 +667,8 @@ p {
         background-image: $fabric;
         height: 42px;
         width: 100vw;
-        z-index: 1000;
+        z-index: 100;
+        transition: all 350ms ease-in-out;
 
         a {
             background-color: white;
@@ -700,11 +701,14 @@ p {
 @media (max-width: 560px) {
 
     #menu-list-container ul {
-        font-size: 2em;
+        font-size: 1.8em;
         padding-right: 64px;
     }
     .contact-container #contact-modal {
         width: 92%;
+        p {
+            width: 300px;
+        }
     }
     #overview-subheading {
         font-size: .7em;

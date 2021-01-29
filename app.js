@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navWorkBtn = document.getElementById('nav-work-btn')
     const navContactBtn = document.getElementById('nav-contact-btn')
     const navMobileContactBtn = document.getElementById('mobile-nav-contact-btn')
+    const navMobileContainer = document.getElementById('mobile-nav-container')
     const contactContainer = document.querySelector('.contact-container')
     const contactCloseBtn = document.getElementById('contact-close-btn')
 
@@ -43,6 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Nav
             navContainer.classList.remove('no-display')
+            navMobileContainer.classList.remove('no-display')
+            
             // Circle
             headCircle.classList.remove('menu-open')
             headCircle.classList.add('menu-close')
@@ -53,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 viewWork.classList.remove('downleft')
                 title.classList.remove('downleft')
                 navContainer.classList.remove('invis')
+                navMobileContainer.classList.remove('invis')
             }, 30)
             setTimeout(() => {
                 headCircle.classList.remove('menu-close')
@@ -69,11 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
             workImgContainer.classList.remove('no-display')
             // Nav
             navContainer.classList.add('invis')
+            navMobileContainer.classList.add('invis')
             setTimeout(() => {
                 menuListContainer.classList.remove('invis')
                 menuListContainer.classList.remove('no-scale')
                 workImgContainer.classList.remove('invis')
                 navContainer.classList.add('no-display')
+                navMobileContainer.classList.add('no-display')
             }, 350)
 
             // Square

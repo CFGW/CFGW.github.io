@@ -600,7 +600,8 @@ h3 {
         bottom: 0;
         height: 42px;
         width: 100vw;
-        z-index: 1000;
+        z-index: 100;
+        transition: all 350ms ease-in-out;
 
         a {
             background-color: white;
@@ -608,7 +609,6 @@ h3 {
             width: 32px;
             height: 32px;
             margin: 0 48px;
-            z-index: 1000;
         }
 
         #mobile-nav-home-btn {
@@ -647,6 +647,9 @@ h3 {
     }
     .contact-container #contact-modal {
         width: 92%;
+        p {
+            width: 300px;
+        }
     }
     #head-circle {
         clip-path: circle(0% at 45% 52%);
