@@ -2,20 +2,12 @@
 <html lang="en">
 
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYTZHW4BW4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-VYTZHW4BW4');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cameron Foster Graphic & Web || CFGW</title>
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="./img/cfgw-favicon-64x64.png">
-    <script src="app.min.js"></script>
+    <script src="app.js"></script>
 </head>
 
 <body>
@@ -27,6 +19,20 @@
             Let's work together: cfgw@protonmail.com
         </p>
     </noscript>
+
+
+    <div id="preloader">
+        <div id="preloader-content">
+          <div id="ls-container">
+            <div class="ls" id="ls1"></div>
+            <div class="ls" id="ls2"></div>
+          </div>
+            <p> What are we <span id="pl-span">making</span> today? </p>
+        </div>
+      </div>
+
+
+
     <div id="nav-container">
         <a class="no-select">home</a>
         <a id="nav-work-btn">work</a>
@@ -36,7 +42,7 @@
         <a href="../index.html" id="mobile-nav-home-btn"></a>
         <a id="mobile-nav-contact-btn"></a>
     </div>
-    <header>
+    <main>
         <div id="menu-container">
             <div class="menu-bar mb-top"></div>
             <div class="menu-bar mb-mid"></div>
@@ -56,8 +62,9 @@
         <div id="head-circle"></div>
 
         <h1 id="title">Cameron Foster</h1>
-        <h3 id="sub-title">Front-end Development &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Digital Design
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UX/UI</h3>
+        <h3 id="sub-title"><span>Front-end Development</span>
+            <span>Digital Design</span>
+            <span>UX/UI</span></h3>
         <p id="view-work-header" data-text="view work">view work</p>
 
         <div class="contact-container no-display invis">
@@ -79,7 +86,7 @@
             </div>
         </div>
 
-    </header>
+    </main>
 
 
 </body>
